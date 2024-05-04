@@ -181,11 +181,8 @@ p {
 
 }
 
-
-@media screen and (min-width:768px) {
-    :root {
-        font-size: 24px;
-    }
+@media screen and (min-width: 768px) {
+    
 
     header {
         padding-inline: 8rem;
@@ -206,13 +203,13 @@ p {
         width: 60%;
         max-width: 60%;
         
-        flex-shrink: 0;
         
 
         img {
             transform: scale(1.2);
             position: absolute;
-            right: -100px;
+            left: 20%;
+            height: auto;
         }
     }
 
@@ -227,8 +224,78 @@ p {
         flex: 1;
         width: 0%;
         flex-shrink: 1;
+        width: 50%;
     }
 
+}
+
+
+@media screen and (min-width:1024px) {
+    :root {
+        font-size: 24px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .logo {
+        margin-block: 3.5rem 7rem;
+        height: 35px;
+    }
+
+
+
+    .open,
+    .close {
+        display: none;
+    }
+
+    nav {
+        display: inline;
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        width: fit-content;
+        height: fit-content;
+        
+    }
+
+    nav a{
+        display: inline-block;
+        margin-bottom: 0;
+        margin-top: 3.5rem;
+        font-size: .8rem;
+    }
+
+    nav a:last-child::before {
+        content: none;
+        margin: 0;
+    }
+
+    nav a:not(:last-child){
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    .cta a:hover {
+        opacity: .7;
+    }
+
+    nav a:last-child {
+        margin-left: 2rem;
+    }
+
+
+   
 
 }
 
